@@ -11,7 +11,7 @@ func main() {
 	// Passing paremeters in the url
 	router.HandleFunc("/item/{id}", func(w http.ResponseWriter, r *http.Request) {
 		id := r.PathValue("id")
-		w.Write(([]byte("Receives request for item: " + id)))
+		w.Write(([]byte("Receives request for items: " + id)))
 	})
 	server := http.Server{
 		Addr:    ":8080",
